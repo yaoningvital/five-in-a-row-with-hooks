@@ -1,0 +1,36 @@
+.game {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  .board {
+    flex: 1;
+
+    .board-row {
+      height: 40px;
+      margin-top: -1px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+
+      .square {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #666;
+        background-color: #fff;
+        cursor: pointer;
+        margin-left: -1px;
+        font-size: 20px;
+        font-weight: bold;
+        outline: none;
+      }
+    }
+
+  }
+
+  .status-area {
+    width: 250px;
+  }
+}
