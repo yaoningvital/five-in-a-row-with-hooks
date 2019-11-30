@@ -32,5 +32,11 @@
 
   .status-area {
     width: 250px;
+
+    .history {
+      button {
+        display: block;
+      }
+    }
   }
 }

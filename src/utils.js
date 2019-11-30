@@ -104,13 +104,13 @@ function winablePermutation (index, rowNum, columnNum) {
 }
 
 
-export function getStatus (squares,layoutNum,xIsNext) {
+export function getStatus (squares, layoutNum, currentStep) {
   let status = ''
   let winnerObj = calculateWinner(squares, layoutNum.rowNum, layoutNum.columnNum)
   if (winnerObj) {
-    status = `赢家是${winnerObj.winner}`
+    status = `赢家是： ${winnerObj.winner}`
   } else {
-    status = '下一步： ' + (xIsNext ? 'X' : 'O')
+    status = '下一步： ' + (currentStep % 2 === 0 ? 'X' : 'O')
   }
   
   return status
